@@ -1,32 +1,24 @@
 public class thirsTask {
 }
 class Mamonth{
-    Mood mood;
+    Mood mood = Mood.CALM;
 
-    public void react(){
-        mood.react();
+    public void Detectthreat(){
+        mood = Mood.PANIC;
+    }
+
+    public void sleep(){
+        mood = Mood.SLEEPY;
+    }
+
+    public void doNothing(){
+        mood = Mood.CALM;
+    }
+
+    public void takeDamage(){
+        mood = Mood.ANGRY;
     }
 }
-abstract class Mood{
-    abstract void react();
-}
-
-class Angry extends Mood{
-
-    @Override
-    void react() {
-
-    }
-}
-class Calm extends Mood{
-    @Override
-    void react() {
-
-    }
-}
-class Panic extends Mood{
-    @Override
-    void react() {
-
-    }
+enum Mood{
+    CALM, ANGRY, PANIC, SLEEPY
 }
