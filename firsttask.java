@@ -20,6 +20,13 @@ class FIFA{
             madridFans.forEach(x -> x.sendMessage("Madrid game has started"));
         }
     }
+
+    public void addMadridFan(Fan fan){
+        madridFans.add(fan);
+    }
+    public void addBarselonaFan(Fan fan){
+        barselonaFans.add(fan);
+    }
 }
 
 class Fan{
